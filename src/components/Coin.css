@@ -1,0 +1,16 @@
+.coin-container {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.coin-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 800px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 8px 4px rgba(0, 0, 0, 0.1);
+}

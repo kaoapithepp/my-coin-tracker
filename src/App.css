@@ -20,3 +20,11 @@
   margin-top: 0px;
   color: #0a1fa8;
 }
+
+@media only screen and (min-width:600px) {
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

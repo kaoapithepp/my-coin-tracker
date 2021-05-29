@@ -3,14 +3,33 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: 0.3s;
+}
+
+.coin-container:hover {
+    transform: scale(1.05);
 }
 
 .coin-display {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 800px;
-    padding: 10px;
-    border-radius: 5px;
+    padding: 20px;
+    border-radius: 20px;
     box-shadow: 2px 2px 8px 4px rgba(0, 0, 0, 0.1);
+}
+
+img {
+    margin: auto;
+    width: 20%;
+}
+
+p {
+    margin: 0px;
+    font-size: 105%;
+}
+
+.curr-price {
+    font-size: 0.7em;
 }

@@ -1,17 +1,17 @@
 import React from 'react';
 import '../components/Coin.css';
 
-const Coin = ({name}) => {
+const Coin = ({name, price}) => {
     return (
         <div className="coin-container">
             <div className="coin-display">
-                <p>{name}</p>
-                <p></p>
+                <img src="./images/Shiba_Inu_coin_logo.png"/>
+                <h2>{name}</h2>
+                <p className="curr-price">Current Price</p>
+                <p>{price} THB</p>
             </div>
         </div>
-    );
-        
-        
+    );     
 }
 
 export default Coin;

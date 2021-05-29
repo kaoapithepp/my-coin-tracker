@@ -1,11 +1,11 @@
 import React from 'react';
 import '../components/Coin.css';
 
-const Coin = ({name, price}) => {
+const Coin = ({name, price, thumbnail}) => {
     return (
         <div className="coin-container">
             <div className="coin-display">
-                <img src="./images/Shiba_Inu_coin_logo.png"/>
+                <img src={thumbnail}/>
                 <h2>{name}</h2>
                 <p className="curr-price">Current Price</p>
                 <p>{price} THB</p>

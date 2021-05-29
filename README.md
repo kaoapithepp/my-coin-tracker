@@ -12,5 +12,5 @@ This project is happened due to my personal interest. Because I'm currently trad
 There are a lot of hard coding inside the source code. Next plan is improving the code by using useReducer and managing the mess of API calling. Moreover, I will add the core value of this site about how much we spent and does it loss or gain.
 
 ___________________________________
-Appreciate and Please with CoinGecko API. </br>
+Appreciate and Please with **CoinGecko API.** </br>
 Copyright 2021 All rights reserved.

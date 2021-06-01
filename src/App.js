@@ -10,6 +10,13 @@ const SHIB_FETCH_URL = 'https://api.coingecko.com/api/v3/coins/shiba-inu?tickers
 const ETH_FETCH_URL = 'https://api.coingecko.com/api/v3/coins/ethereum?tickers=false&market_data=true&community_data=false&developer_data=false&sparkline=false';
 const BNB_FETCH_URL = 'https://api.coingecko.com/api/v3/coins/binancecoin?tickers=false&market_data=true&community_data=false&developer_data=false&sparkline=false';
 
+const SHIB_VALUE = 950189.05000000;
+const ETH_VALUE = 0.00282746;
+const BNB_VALUE = 0.00801328;
+
+const INIT_WORTH = 906.4;
+
+
 function App() {
 
   const [ethName, setEthName] = useState('');
@@ -85,6 +92,15 @@ function App() {
       })
       .catch(err => console.log(err.message));
   })
+
+  const NET_WORTH = ((ethPrice*ETH_VALUE)+(bnbPrice*BNB_VALUE)+(shibPrice*SHIB_VALUE)).toFixed(4);
+  const UpdateValue = () => {
+    if (NET_WORTH>=INIT_WORTH) {
+      return <p className="gain">{(NET_WORTH-INIT_WORTH).toFixed(4)}</p>
+    } else {
+      return <p className="loss">{(NET_WORTH-INIT_WORTH).toFixed(4)}</p>
+    }
+  }
     
 
   return (
@@ -93,21 +109,29 @@ function App() {
         <h1>mycointracker.app</h1>
         <p>personal cryptocurrency price tracker</p>
       </div>
+      <div className="summary">
+        <p>Asset Net Worth</p>
+        <h2>{NET_WORTH} THB</h2>
+        {UpdateValue()}
+      </div>
       <div className="content">
         <Coin 
           name={ethName}
           price={ethPrice}
           thumbnail={thumbnail[0]}
+          worthy={ETH_VALUE}
         />
         <Coin 
           name={bnbName}
           price={bnbPrice}
           thumbnail={thumbnail[1]}
+          worthy={BNB_VALUE}
         />
         <Coin 
           name={shibName}
           price={shibPrice}
           thumbnail={thumbnail[2]}
+          worthy={SHIB_VALUE}
         />
       </div>
     </div>

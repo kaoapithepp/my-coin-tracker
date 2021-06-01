@@ -21,8 +21,33 @@
   color: #0a1fa8;
 }
 
+.summary {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.summary h2 {
+  margin-top: 10px;
+}
+
+.loss {
+  font-size: 0.8em;
+  margin: -10px;
+  color: red;
+}
+
+.gain {
+  font-size: 0.8em;
+  margin: -10px;
+  color: green;
+}
+
 @media only screen and (min-width:600px) {
   .content {
+    margin-top: -40px;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -13,10 +13,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 10px;
     border-radius: 20px;
     box-shadow: 2px 2px 8px 4px rgba(0, 0, 0, 0.1);
 }
+
 
 img {
     margin: auto;
@@ -30,14 +31,15 @@ p {
 
 .curr-price {
     font-size: 0.7em;
+    margin-top: 10px;
 }
 
 @media only screen and (min-width:600px) {
     .coin-display {
-        width: 100%;
+        width: 70%;
         height: 70%;
         display: flex;
         margin: 40px 20px;
-        padding: 100px;
+        padding: 50px;
     }
 }
